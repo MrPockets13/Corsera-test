@@ -5,6 +5,12 @@
   border: 1px solid #ccc;
 }
 
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 /* Styles for desktop (992px and above) */
 @media screen and (min-width: 992px) {
   .section {
