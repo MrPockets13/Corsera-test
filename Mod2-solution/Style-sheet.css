@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 20px;
   border: 1px solid black;
+  background: #5A5A5A;
   position: relative;
   color: #fff;
 }
