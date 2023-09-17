@@ -2,13 +2,18 @@
 .section {
   box-sizing: border-box;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
+  position: relative;
+  color: #fff;
 }
 
 .section-title {
   position: absolute;
   top: 0;
   right: 0;
+  padding: 10px;
+  border: 1px solid black;
+  color: #000;
 }
 
 /* Styles for desktop (992px and above) */
@@ -26,7 +31,7 @@
     float: left; /* Arrange first 2 sections in a row */
   }
 
-  .section:nth-child(4) {
+  .section:nth-child(3) {
     width: 100%; /* Full width for the third section in a new row */
     clear: both; /* Start a new row for the third section */
   }
