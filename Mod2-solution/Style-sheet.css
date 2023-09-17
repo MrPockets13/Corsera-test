@@ -1,11 +1,16 @@
 /* Base styles for all views */
+body {
+  margin: 0; /* Remove default body margin */
+  font-family: Arial, sans-serif; /* Set a common font family */
+}
+
 .section {
   box-sizing: border-box;
   padding: 20px;
   border: 1px solid black;
-  background: #5A5A5A;
   position: relative;
-  color: #000;
+  color: #fff;
+  margin-bottom: 20px; /* Add spacing between the boxes */
 }
 
 .section-title {
@@ -15,33 +20,59 @@
   padding: 10px;
   border: 1px solid black;
   color: #000;
+  background-color: #fff; /* White background for title */
 }
 
 /* Styles for desktop (992px and above) */
 @media screen and (min-width: 992px) {
   .section {
-    width: 33.33%; /* Equal width for each section */
-    float: left; /* Arrange sections in a row */
+    width: 32%; /* Adjust width to account for spacing */
+    float: left;
+    background-color: #3498db;
+    margin-right: 2%; /* Add spacing between the boxes */
+  }
+
+  .section:nth-child(3) {
+    margin-right: 0; /* Remove margin for the last box in the row */
+  }
+
+  .section-title {
+    background-color: #e74c3c;
   }
 }
 
 /* Styles for tablet (768px to 991px) */
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .section {
-    width: 50%; /* Equal width for the first 2 sections */
-    float: left; /* Arrange first 2 sections in a row */
+    width: 48%; /* Adjust width to account for spacing */
+    float: left;
+    background-color: #2ecc71;
+    margin-right: 2%; /* Add spacing between the boxes */
+  }
+
+  .section-title {
+    background-color: #f39c12;
+  }
+
+  .section:nth-child(2n) {
+    margin-right: 0; /* Remove margin for every 2nd box in the row */
   }
 
   .section:nth-child(3) {
-    width: 100%; /* Full width for the third section in a new row */
-    clear: both; /* Start a new row for the third section */
+    width: 100%;
+    margin-right: 0; /* Remove margin for the last box in the row */
   }
 }
 
 /* Styles for mobile (equal to or less than 767px) */
 @media screen and (max-width: 767px) {
   .section {
-    width: 100%; /* Full width for each section in a new row */
-    clear: both; /* Start a new row for each section */
+    width: 100%;
+    margin-right: 0;
+    background-color: #f1c40f;
+  }
+
+  .section-title {
+    background-color: #34495e;
   }
 }
